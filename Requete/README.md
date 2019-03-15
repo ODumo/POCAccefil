@@ -65,3 +65,44 @@ Et finalement, on classe les contexts en fonction de le leur score afin de faire
 ```
 ranked_context = sorted(list(context.values()),key= lambda x: x["score"], reverse=True)
 ```
+
+### nlu_config.yml
+
+Ici, il est très simple, il configure le langage et les entraineurs nécéssaires.
+
+```
+language: "fr"
+pipeline: "spacy_sklearn"
+```
+
+### nlu_trainer.py
+
+Permet quelques économies de performances.
+
+```
+builder = ComponentBuilder(use_cache=True)
+```
+
+Chargement des données d'entrainement.
+
+```
+training_data = load_data('data/nlu')
+```
+
+Création de l'entraineur associé à la configuration.
+
+```
+trainer = Trainer(config.load("./nlu_config.yml"), builder)
+```
+
+Entrainement.
+
+```
+trainer.train(training_data)
+```
+
+Sauvegarde du modèle entrainé.
+
+```
+model_directory = trainer.persist('./projects/default/', fixed_model_name="model")
+```
