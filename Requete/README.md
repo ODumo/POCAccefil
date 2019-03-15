@@ -35,6 +35,12 @@ La commande link permet d'utiliser "fr" à la place du nom complet du modèle.
 ## Code
 ### Requete.py
 
+Chargement du model contenant les training models ainsi que des configurations plus avancés.
+
+```
+interpreter = Interpreter.load("./projects/default/default/model")
+```
+
 Ce code s'occupe de lire l'input ( pour le moment, l'implémentation pour lire un fichier .txt est tout à fait viable ),
 qui le parsera à l'interpreter pour trouver un intent présent à la fois dans l'input et dans les training models du model.
 
