@@ -1,0 +1,3 @@
+Le dépôt est divisé en deux partie :
+- Requete, qui contient l'ensemble des éléments permettant d'analyser les phrases.
+- Indexation, qui regroupe les composants utilisé pour l'indexation et la recherche de documents.
