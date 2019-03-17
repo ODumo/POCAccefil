@@ -6,7 +6,7 @@ if __name__ == "__main__":
     print("Chargement du modèle, cette action peut prendre du temps.")
     interpreter = Interpreter.load("./projects/default/default/model")
 
-    '''
+    """
     La structure context correspond à l'ensemble des intents permettant de déterminer
     un type de document. Un classement est effectué en fonction du score de chaque élément.
     Le score correspond à la valeur "confidence" retournée par l'interpréteur de RASA.
@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     On pourra associer à chaque intent de cette structure une liste de mots correspondant
     au document et qui seront utilisés pour la recherche dans les documents indexés.
-    '''
+    """
     context = {
         "hospitalisation": {"score":0, "mots":["hospitalisation","service"]},
         "remboursement": {"score":0, "mots":["remboursement","client"]},
@@ -30,10 +30,10 @@ if __name__ == "__main__":
     ipt = input("Entrer l'expression à analyser ou exit pour quitter : ")
     while ipt != "exit":
         parsed = interpreter.parse(ipt)
-        '''
+        """
         Modification du context seulement si l'intent en fait parti et si sa valeur "confidence" est supérieure 
         au palier établi arbitrairement.
-        '''
+        """
         if parsed["intent"]["confidence"] > 0.4 and parsed["intent"]["name"] in context :
             #Incrémentation du score de l'intent
             context[parsed["intent"]["name"]]["score"]+=parsed["intent"]["confidence"]
