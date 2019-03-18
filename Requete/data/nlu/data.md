@@ -7,7 +7,7 @@
 - je souhaiterais des informations sur la dernière hospitalisation de monsieur [bernard](nom)
 
 ## intent:remboursement
-- je souhaiterais savoir où est en ma demande de remboursement
+- je souhaiterais savoir où en est ma demande de remboursement
 - où en est mon dossier de remboursement
 - je vous avez fait une demande de remboursement
 - expliquez moi les retards sur mon remboursement

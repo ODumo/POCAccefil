@@ -29,7 +29,7 @@ print(res["result"])
 
 """
 Recherche dans l'index pocaccefil.
-Dans cet exemple on match les document qui ont obligatoirement Microsoft
+Dans cet exemple on match les documents qui ont obligatoirement Microsoft
 dans leur contenu. L'autre partie de la requête effectue la même chose avec le mot "Gattes"
 qui correspond à une erreur d'écriture. Le paramètre fuzziness permet l'utilisation de la
 distance de Levenshtein et indique la distance maximale autorisée pour considérer un match.

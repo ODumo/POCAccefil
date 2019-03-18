@@ -16,15 +16,15 @@ Une fois l'image lancée, l'API elasticsearch est attaquable sur le port 9200 su
 
 ## Utilisation
 
-Tout d'abord, il est nécessaire de créer un index de la manière suivante.
+Tout d'abord, il est nécessaire de créer un index de la manière suivante :
 ```
 curl -X PUT "localhost:9200/pocaccefil?pretty"
 ```
 L'option "pretty" permet d'avoir le retour de la requête dans un format JSON lisible.
 
-Les documents que nous ajouteront seront stockés à cet index.
+Les documents que nous ajouterons seront stockés à cet index.
 
-Pour l'exemple, nous utiliserons le contenu des deux documents Bill.txt et Steve.txt. Ces textes correspondent aux premiers paragraphes des pages Wikipedia de Bill Gates et Steve Jobs.
+Pour l'exemple, nous utiliserons le contenu des deux documents Bill.txt et Steve.txt. Ces textes correspondent au premier paragraphe des pages Wikipedia de Bill Gates et Steve Jobs.
 
 Nous allons donc commencer par entrer les données dans elasticsearch. Pour cela nous allons effectuer les requêtes suivantes :
 ```

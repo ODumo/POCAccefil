@@ -10,12 +10,12 @@ if __name__ == "__main__":
     La structure context correspond à l'ensemble des intents permettant de déterminer
     un type de document. Un classement est effectué en fonction du score de chaque élément.
     Le score correspond à la valeur "confidence" retournée par l'interpréteur de RASA.
-    Si deux phrase retourne le même intent, son score dans intent_ranking sera la somme 
-    des valeurs de "confidence" de RASA. Celà permet d'affiner la recherche et limiter
+    Si deux phrases retournent le même intent, leur score dans intent_ranking sera la somme 
+    des valeurs de "confidence" de RASA. Cela permet d'affiner la recherche et limiter
     les erreurs au fil de la conversation.
 
     On pourra associer à chaque intent de cette structure une liste de mots correspondant
-    au document et qui seront utilisés pour la recherche dans les documents indexés.
+    au document et qui sera utilisée pour la recherche dans les documents indexés.
     """
     context = {
         "hospitalisation": {"score":0, "mots":["hospitalisation","service"]},

@@ -35,13 +35,13 @@ La commande link permet d'utiliser "fr" à la place du nom complet du modèle.
 ## Code
 ### Requete.py
 
-Chargement du model contenant les training models ainsi que des configurations plus avancés.
+Chargement du model contenant les training models ainsi que des configurations plus avancées.
 
 ```
 interpreter = Interpreter.load("./projects/default/default/model")
 ```
 
-Ce code s'occupe de lire l'input ( pour le moment, l'implémentation pour lire un fichier .txt est tout à fait viable ),
+Ce code s'occupe de lire l'input (pour le moment, l'implémentation pour lire un fichier .txt est tout à fait viable),
 qui le parsera à l'interpreter pour trouver un intent présent à la fois dans l'input et dans les training models du model.
 
 ```
@@ -58,7 +58,7 @@ if parsed["intent"]["confidence"] > 0.4 and parsed["intent"]["name"] in context 
             context[parsed["intent"]["name"]]["score"]+=parsed["intent"]["confidence"]
 ```
 
-Ensuite, on sauvegarde les entities trouvé s'il y en a.
+Ensuite, on sauvegarde les entities trouvées s'il y en a.
 
 ```
 for entity in parsed["entities"]:
@@ -66,7 +66,7 @@ for entity in parsed["entities"]:
 
 ```
 
-Et finalement, on classe les contexts en fonction de le leur score afin de faire ressortir le sujet de discussion le plus probable.
+Et finalement, on classe les contexts en fonction de leur score afin de faire ressortir le sujet de discussion le plus probable.
 
 ```
 ranked_context = sorted(list(context.values()),key= lambda x: x["score"], reverse=True)
@@ -74,7 +74,7 @@ ranked_context = sorted(list(context.values()),key= lambda x: x["score"], revers
 
 ### nlu_config.yml
 
-Ici, il est très simple, il configure le langage et les entraineurs nécéssaires.
+Ici, il est très simple. Il configure le langage et les entraineurs nécéssaires.
 
 ```
 language: "fr"
