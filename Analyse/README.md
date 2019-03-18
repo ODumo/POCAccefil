@@ -1,4 +1,4 @@
-# Module de requête
+# Module d'analyse
 ## Installation
 ### Via python  :
 Pour une installation via package python les commandes suivantes doivent être exécutées.
@@ -30,10 +30,18 @@ python -m spacy download fr_core_news_md
 python -m spacy link fr_core_news_md fr
 ```
 
-La commande link permet d'utiliser "fr" à la place du nom complet du modèle.
+La commande link permet d'utiliser "fr" comme alias à la place du nom complet du modèle.
+
+### Via docker
+
+Il est également possible d'effectuer une installation par docker. 
+```
+docker run -p 5000:5000 rasa/rasa_nlu:latest-full
+```
+Dans cette situation, les comminucations avec RASA vont s'effectuer par API REST. Les fichiers de configuration seront également envoyés comme objets à travers des requêtes.
 
 ## Code
-### Requete.py
+### analyse.py
 
 Chargement du model contenant les training models ainsi que des configurations plus avancées.
 

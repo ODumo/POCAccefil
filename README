@@ -1,3 +1,5 @@
+# POC Accefil
+
 Le dépôt est divisé en deux parties :
-- Requete, qui contient l'ensemble des éléments permettant d'analyser les phrases.
+- Analyse, qui contient l'ensemble des éléments permettant d'analyser les phrases.
 - Indexation, qui regroupe les composants utilisés pour l'indexation et la recherche de documents.
